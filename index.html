@@ -65,7 +65,7 @@
 					<h1 class="hero-title">
 						EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
 					</h1>
-					<button class="hero-btn" type="button">Zamów usługe</button>
+					<button class="hero-btn" type="button" data-modal-open>Zamów usługe</button>
 				</div>
 			</section>
 
@@ -505,16 +505,18 @@
 				</div>
 			</div>
 		</footer>
-		<!-- <div class="backdrop is-hidden" data-modal>
+		
+        <div class="is-hidden" data-modal>
             <div class="modal">
                 
                 <button
                     type="button"
                     class="close-btn"
-                    data-modal-close
-                ></button>
+                    data-modal-close>
+                    <img src="./images/close-black.svg" alt="Close button" width="11" height="11">
+                </button>
             </div>
-        </div> -->
+        </div>
 
 		<script src="./modal.js"></script>
 	</body>
