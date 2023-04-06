@@ -505,7 +505,6 @@ a {
 .partners-logos {
 	border: 1px solid var(--icons-fill);
 	border-radius: 4px;
-	border-color: var(--icons-fill);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -515,6 +514,7 @@ a {
 
 .partners-logos > svg {
 	fill: var(--icons-fill);
+transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .partners-logos:hover > svg,
 .partners-logos:hover {
