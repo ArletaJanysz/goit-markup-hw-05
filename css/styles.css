@@ -554,13 +554,6 @@ a {
 	fill: var(--bg-color);
 }
 
-li:focus > svg {
-	fill: var(--active-color);
-}
-
-li:focus {
-	border-color: var(--active-color);
-}
 
 /* MODAL HW05 */
 
@@ -580,7 +573,6 @@ li:focus {
 .modal {
 	display: block;
 	position: relative;
-
 	width: 528px;
 	min-height: 581px;
 	background-color: var(--bg-color);
@@ -605,7 +597,7 @@ li:focus {
 	border-radius: 50%;
 	align-items: center;
         justify-content: center;
-cursor:pointer;
+        cursor:pointer;
 
 
 }
