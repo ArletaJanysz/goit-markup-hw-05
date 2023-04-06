@@ -105,14 +105,17 @@ ul {
 	content: "";
 	position: absolute;
 	display: block;
-	width: 53px;
+	width: 100%;
 	height: 4px;
-	background: var(--active-color);
+	/* background: var(--active-color); */
 	border-radius: 2px;
 	margin-top: 25px;
 }
 
-/* .nav::after:hover .nav-link {
+.nav-link:active::after{
+  background: var(--active-color);
+}
+  /* .nav::after:hover .nav-link {
    opacity: 0.8;
 
     } */
@@ -569,6 +572,7 @@ li:focus {
 }
 
 .modal {
+    /* display:block; */
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -579,10 +583,15 @@ li:focus {
 	border-radius: 4px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
-     
-   
+    animation: fade-out 3000ms forwards
 }
 
+/*  animation-name: nazwaAnimacji;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-delay: 1000ms;
+    animation-iteration-count: 5;
+    animation-direction: alternate; */
 .close-btn {
 	position: absolute;
 	top: 0;
@@ -594,8 +603,45 @@ li:focus {
 	border-radius: 50%;
 }
 
+
 .is-hidden {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+}
+
+/* testy */
+
+@keyframes fade-in
+
+0% {
+	opacity: 0; /* Właściwości do zmiany */
+}
+
+100% {
+	opacity: 1; /* Właściwości do zmiany */
+}
+
+@keyframes fade-out
+
+100% {
+	opacity: 1; /* Właściwości do zmiany */
+}
+
+0% {
+	opacity: .2; /* Właściwości do zmiany */
+}
+
+@keyframes slide-up
+
+0% {
+	transform: translateY(100%); /* Właściwości do zmiany */
+}
+
+100% {
+	transform: translateY(0%); /* Właściwości do zmiany */
+}
+
+.modal[open] {
+	animation: fade-in 3000ms forwards;
 }
